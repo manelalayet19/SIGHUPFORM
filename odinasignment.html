@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odin asignment </title>
+    <link rel="stylesheet" href="./odin-asign.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="img-wrapper"><img src="./lexi-laginess-6poDd1l6UlM-unsplash.jpg" alt=" leaf">
+                <div id="logo-img"><a href="#"><img id='logo' src="./Leaf_icon_03.svg.png" alt="logo"></a></div>
+            </div>
+
+        </div>
+
+        <div class=" right">
+            <h1>
+                This is not a real online service! You know you need something like this in your life to help you
+                realize your deepest dreams.
+
+                Sign up now to get started.
+            </h1>
+            <h2>You know you want to.
+
+            </h2>
+            <h3>
+                Lets do this !
+            </h3>
+            <form action="#" method=" post" id="form-inputs">
+                <div class="wrapper">
+                    <div class="input-fields"><label for="">username</label><input type="text" name="" id="username"
+                            required>
+                    </div>
+                    <div class="input-fields"> <label>Email</label> <input type="email" required>
+                    </div>
+                    <div class="input-fields"> <label for="">password</label>
+                        <input type="password" required>
+                    </div>
+                    <div class="input-fields"><label id="tel">Tel </label><input type="tel" required></div>
+                </div>
+
+                <button type="submit">submit</button>
+                <span> Already has an account <a href="#" id='space'> log in</a></span>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script>
+    const forminputs = document.querySelector('#form-inputs');
+
+    forminputs.addEventListener('submit', (e) => {
+
+        const inputValues = document.querySelectorAll('.input-fields');
+
+        inputValues.forEach((input) => {
+            if (input.value === "") {
+                input.classList.add('#empty');
+                input.classList.remove('#full');
+
+            } else {
+                input.classList.add('#full');
+                input.classList.remove('#empty');
+
+            }
+        });
+
+        e.preventDefault();
+    })
+</script>
+
+</html>
